@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full Stack App – Assignment
 
-## Getting Started
+This is a **full stack web application** built with **Next.js (App Router)**, **MongoDB**, and **NextAuth.js**.  
+The application includes key features like user registration, login, protected dashboard routes, and a modular layout with reusable components.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Database:** MongoDB
+- **Authentication:** NextAuth.js
+- **Language:** TypeScript
+- **Styling:** CSS / Tailwind (optional)
+
+---
+
+## ⚙️ Installation & Setup
+
+> ⚠️ **Important Note**  
+To reduce the file size while submitting the assignment, the `node_modules` folder has been **intentionally deleted**.  
+Without it, the project **will not run**. Please follow the steps below to set it up correctly.
+
+### 1. Extract the Project
+
+After extracting the project folder, open it in your code editor or terminal.
+
+### 2. Install Dependencies
+
+To download the missing `node_modules` folder, run:
+
+```
+npm i 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To install all required packages, run:
+```
+npm install
+```
+This command will restore all the deleted dependencies.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the Development Server
+Once the environment and dependencies are set up, start the development server:
+```
+npm run dev
+```
 
-## Learn More
+The project will be available at:
+http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication
+- User authentication is handled using NextAuth.js
+- Includes both register and login flows
+- The dashboard route is protected using middleware
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Notes
+- Do not forget to run npm i after extracting the project, or it will not work.
