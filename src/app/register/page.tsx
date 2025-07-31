@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,17 +20,13 @@ export default function RegisterPage() {
         body: JSON.stringify(form),
       });
 
-      let data;
-      try {
-        data = await res.json(); // try parsing JSON safely
-      } catch {
-        throw new Error('Invalid JSON response from server');
-      }
+      const data = await res.json();
 
       if (!res.ok) {
         alert(data.error || 'Registration failed');
       } else {
         alert(data.message || 'Registered successfully');
+        router.push('/predictor'); // 👈 redirect after success
       }
     } catch (err) {
       console.error('Error in form submit:', err);

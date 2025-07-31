@@ -6,7 +6,7 @@ The application includes key features like user registration, login, protected d
 ---
 
 ## 🛠️ Tech Stack
-fgfgf
+
 - **Framework:** Next.js (App Router)
 - **Database:** MongoDB
 - **Authentication:** NextAuth.js
